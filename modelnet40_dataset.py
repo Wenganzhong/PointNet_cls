@@ -30,7 +30,7 @@ class ModelNet40(Dataset):
         self.data = np.concatenate(data_list,axis=0)
         self.labels = np.concatenate(label_list,axis=0).astype(np.int16)
 
-        assert 1<=num_points<self.data.shape[1] # 这是什么意思？
+        assert 1<=num_points<=self.data.shape[1] # 这是什么意思？
 
 
 
